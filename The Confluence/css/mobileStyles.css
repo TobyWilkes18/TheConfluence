@@ -1,0 +1,9 @@
+@media only screen and (max-width: 480px) {
+    .stock {
+        display:none;
+    }
+    
+    .menu-opener, .menu-opener:hover, .menu-opener.active, .menu-opener-inner, .menu-opener-inner::before, .menu-opener-inner::after, .menu, .menu.active{
+        display:none;
+    }
+}
