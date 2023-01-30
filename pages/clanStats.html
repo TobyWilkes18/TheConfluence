@@ -1,0 +1,111 @@
+<?php
+include "php/config.php";
+
+session_start();
+$id = $_SESSION["id"];
+$username = $_SESSION["username"];
+
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Site</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/loadingGraphic.css">
+    <link rel="stylesheet" href="../css/expandButton.css">
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    
+</head>
+
+
+    <!-- Nav Menu Start -->
+   
+    <div class="stock"><!-- Stop inheriting of Parallax css -->
+        <nav class="menu-opener">
+            <div class="menu-opener-inner"></div>
+        </nav>
+        <nav class="menu">
+            <ul class="menu-inner hide">
+                <a href="../index.html" class="menu-link">
+                    <li>Equipped Items</li>
+                </a>
+                <!--<a href="../pages/milestone.html" class="menu-link">
+                    <li>Milestone Checklist</li>
+                </a>-->
+                <a href="../pages/pvpStats.html" class="menu-link">
+                    <li>PvP Stats</li>
+                </a>
+                <a href="#" class="menu-link">
+                    <li>Clan</li>
+                </a>
+                <!--<a href="#" class="menu-link">
+                    <li>Item 5</li>
+                </a>-->
+            </ul>
+        </nav>     
+        <script src="../js/menu-opener.js"></script>    
+    </div><!-- Nav Menu End -->
+
+<body>
+    <div class="container" style="padding-top:100px;">
+        <h1 class="display-2" style="border-bottom:solid 2px;">Clan Stats</h1>
+        <br />
+        <h2 class="text-center">Username Search</h2>
+        <div id="mainInputStats" class="container text-center">
+            <input type="search" id="userInputStats" name="q" value="<?php echo $username?>">
+            
+            <div class="container">
+            <div class="radio-tile-group">
+                <div class="input-container platformSelect">
+                    <input id="psninputStats" class="radio-button" type="radio" name="platformType" value="2" />
+                    <div class="radio-tile">
+                        <label for="radiopsn" class="radio-tile-label">PSN</label>
+                    </div>
+                </div>
+
+                <div class="input-container platformSelect">
+                    <input id="xboxinput" class="radio-button" type="radio" name="platformType" value="1"/>
+                    <div class="radio-tile">
+                        <label for="radioxbox" class="radio-tile-label">Xbox</label>
+                    </div>
+                </div>
+
+                <div class="input-container platformSelect">
+                    <input id="pcinput" class="radio-button" type="radio" name="platformType" value="4"/>
+                    <div class="radio-tile">
+                        <label for="radiopc" class="radio-tile-label">PC</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            <div class="wrapper" id="buttonSearchStats">
+                <div class='bttn out'>
+                    <span>Search</span>
+                    <div class='corners top'></div>
+                    <div class='corners bottom'></div>
+                </div>
+            </div>
+        </div><!-- End Search -->
+        
+        <div id="usernameStats" class="hide"></div>
+        <div id="memberIDStats" class="hide"></div>
+        <div id="platformTypeNumber" class="hide"></div>
+        
+        
+    
+    
+    </div><!-- End Container -->
+    <script type="text/javascript" src="../js/pvpStats.js"></script>
+    <script type="text/javascript" src="../js/pvpStats.js"></script>
+    
+</body>
+
+</html>
